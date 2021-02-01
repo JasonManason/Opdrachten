@@ -120,7 +120,7 @@ def palindroom(woord):
     '''Checkt of input een palindroom is d.m.v. string slicing.'''
     return woord == woord[::-1] # => -1 = stapgrootte vanaf achteraan
 
-#print(palindroom('lepel')) #<= comment uit om meteen andere opdracht te runnen.
+#print(palindroom('lepel')) # => comment uit om meteen andere opdracht te runnen.
 
 
 #=================================================Opdracht 5, Sorteren:=================================================
@@ -146,17 +146,35 @@ def sorteren(lst):
 
 
 #================================================Opdracht 6, Gemiddelde:================================================
-def gemiddelde():
+def gemiddelde(lst):
     '''Berekent gemiddelde waarde van input lijst met cijfers.'''
+    return sum(lst) / len(lst)
+
+#print(gemiddelde([1, 6, -12, 498, 6, 8, 4, 13, 55])) # <= comment uit om meteen andere opdracht te runnen.
 
 
-
-
-def gemiddelde_lists():
+def gemiddelde_lists(lst):
     '''Berekent gemiddelde van input lijst met lijsten met cijfers.'''
+    new = []
+    for l in lst:
+        new.append(gemiddelde(l))
+    new = gemiddelde(new)
+
+    return new
+
+#print(gemiddelde_lists([[1, 6, -12, 498, 6, 8, 4, 13, 55], [0 ,8 ,34 ,12 ,-45 ,89 ,-16], [-10 ,-17 ,-1 ,4 ,7 ,12]])) # <= comment uit om meteen andere opdracht te runnen.
 
 
+#==================================================Opdracht 7, Random:==================================================
+def willekeurig():
+    '''Laat gebruiker gokken uit lijst met cijfers tot antwoord goed is. Antwoord is willekeurig.'''
+    #lst = [] #<= willekeurige cijfers in lst
 
+    #<= user input()?
+
+    #check if input in lst: return True of False
+
+#willekeurig()
 
 
 #================================================Opdracht 10, Fibonaci:=================================================
@@ -166,4 +184,4 @@ def fibonacci(n, v0=0, v1=1):
 
     return fibonacci(n - 1, v1, v0 + v1) if n > 1 else (v0, v1)[n] # <= tot "n" klein genoeg is
 
-#print(fibonacci(9)) #<= comment uit om meteen andere opdracht te runnen.
+#print(fibonacci(9)) # <= comment uit om meteen andere opdracht te runnen.
