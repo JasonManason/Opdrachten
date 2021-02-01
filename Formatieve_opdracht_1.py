@@ -65,7 +65,7 @@ def choose_loop():
     else:
         print('Please run the program again and type in a valid option.')
 
-choose_loop() # <= comment uit om meteen de volgende opdracht te runnen.
+#choose_loop() # <= comment uit om meteen andere opdracht te runnen.
 
 
 #================================================Opdracht 2, Tekstcheck:================================================
@@ -74,9 +74,24 @@ def compare_string_characters():
     text_1 = input('Please enter a sentence.\n').capitalize()
     text_2 = input('Please enter another sentence to compare with the last.\n').capitalize()
 
-    print(f'{text_1}\n{text_2}\n')
+    for i in text_1:
+        if text_1.index(i) == text_2.index(i):
+            index = (text_1.index(i) + 1)
+
+    return print(f'The difference is in character {index}.')
+
+#print(compare_string_characters()) # <= comment uit om meteen andere opdracht te runnen.
 
 
-    print('The difference is in the {zoveelste}e character.') #<= filler text.
+#================================================Opdracht 3, Lijstcheck:================================================
+def count():
+    '''Berekent hoevaak getal x in een lijst voorkomt.'''
 
-compare_string_characters()
+
+#================================================Opdracht 4, Palindroom:================================================
+
+def palindroom(woord):
+    '''Checkt of input een palindroom is d.m.v. string slicing.'''
+    return woord == woord[::-1] # => -1 = stapgrootte vanaf achteraan
+
+#print(palindroom('lepel')) #<= comment uit om meteen andere opdracht te runnen.
