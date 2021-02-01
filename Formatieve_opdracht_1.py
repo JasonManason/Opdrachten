@@ -175,16 +175,21 @@ def willekeurig():
         gok = int(input(f'Guess the number between 0 and 10:\n'))
     print('Correct!')
 
-
 #willekeurig() # <= comment uit om meteen andere opdracht te runnen.
 
 
 #================================================Opdracht 8, Compressie:================================================
 def compressie():
-    '''Verwijdert alle spaties en tabs aan het begin van elke regel van input bestand.'''
+    '''Verwijdert alle lege regels en alle spaties en/of tabs aan het begin van elke regel van input bestand.'''
+    #open file met optie tot rewrite
+    #for line in file: (lines als string)
+    # if (characters in file) => strip string
+
+#compresie()
 
 
-
+#============================================Opdracht 9, Cyclisch verschuiven:==========================================
+'''evt gebruik maken van bit shiften!'''
 
 #================================================Opdracht 10, Fibonaci:=================================================
 def fibonacci(n, v0=0, v1=1):
