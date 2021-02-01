@@ -84,14 +84,62 @@ def compare_string_characters():
 
 
 #================================================Opdracht 3, Lijstcheck:================================================
-def count():
+def count(lst, x):
     '''Berekent hoevaak getal x in een lijst voorkomt.'''
+    return lst.count(x)
+
+#print(count([1, -12, 0, 4, 33, 600, 43, -16, 4], 4)) # <= comment uit om meteen andere opdracht te runnen.
+
+
+def verschil(lst):
+    '''Berekent grootste verschil tussen 2 opeenvolgende getallen in lst.'''
+    new_lst = []
+    for i in range(0, len(lst)):
+        verschil = lst[i] - lst[i - 1]
+
+        new_lst.append(verschil)
+
+    return max(new_lst)
+
+#print(verschil([1, -12, 0, 4, 33, 600, 43, -16, 4]))# <= comment uit om meteen andere opdracht te runnen.
+
+
+def binair(lst):
+    '''Checkt of aantal meegegeven eenen groter is dan het aantal meegegeven aantal nullen,
+    zolang er niet meer dan 12 nullen zijn. Returnt True/False.'''
+    if lst.count(0) >= lst.count(1) or lst.count(0) >= 12:
+        return False
+    else:
+        return True
+
+#print(binair([0,1,1,1,1,0,0,1,1,1,0,0,1,0,1])) # <= comment uit om meteen andere opdracht te runnen.
 
 
 #================================================Opdracht 4, Palindroom:================================================
-
 def palindroom(woord):
     '''Checkt of input een palindroom is d.m.v. string slicing.'''
     return woord == woord[::-1] # => -1 = stapgrootte vanaf achteraan
 
 #print(palindroom('lepel')) #<= comment uit om meteen andere opdracht te runnen.
+
+
+#=================================================Opdracht 5, Sorteren:=================================================
+def sorteren(lst):
+    '''Geeft gesorteerde lijst terug.'''
+    srt_lst = []
+
+    #if
+
+    return srt_lst
+
+print(sorteren([1, 6, -12, 498, 6, 8, 4, 13, 55]))
+
+
+#================================================Opdracht 10, Fibonaci:=================================================
+def fibonacci(n, v0=0, v1=1):
+    '''Geeft de index terug van "fn" in de Fibonacci van "n".'''
+    #return fibonacci(n - 1) + fibonacci(n - 2) if n > 1 else (0, 1) [n] # <= roept zichzelf 2x aan = slomer, creeert boom.
+
+    return fibonacci(n - 1, v1, v0 + v1) if n > 1 else (v0, v1)[n] # <= tot "n" klein genoeg is
+
+#print(fibonacci(9)) #<= comment uit om meteen andere opdracht te runnen.
