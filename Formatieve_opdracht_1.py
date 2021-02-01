@@ -125,14 +125,38 @@ def palindroom(woord):
 
 #=================================================Opdracht 5, Sorteren:=================================================
 def sorteren(lst):
-    '''Geeft gesorteerde lijst terug.'''
-    srt_lst = []
+    '''Sorteert lijst met cijfers.'''
+    lst_sorted = []
+    for i in lst:
+        lst_sorted.append(i)
 
-    #if
+    for item in lst_sorted:
+        position = lst_sorted.index(item)
 
-    return srt_lst
+        while position > 0:  # anders begin je weer achteraan list.
 
-print(sorteren([1, 6, -12, 498, 6, 8, 4, 13, 55]))
+            if item < lst_sorted[position - 1]:
+                lst_sorted[position - 1], lst_sorted[position] = lst_sorted[position], lst_sorted[
+                    position - 1]  # swap variabelen
+            position -= 1
+
+    return lst_sorted
+
+#print(sorteren([1, 6, -12, 498, 6, 8, 4, 13, 55])) # => comment uit om meteen andere opdracht te runnen.
+
+
+#================================================Opdracht 6, Gemiddelde:================================================
+def gemiddelde():
+    '''Berekent gemiddelde waarde van input lijst met cijfers.'''
+
+
+
+
+def gemiddelde_lists():
+    '''Berekent gemiddelde van input lijst met lijsten met cijfers.'''
+
+
+
 
 
 #================================================Opdracht 10, Fibonaci:=================================================
