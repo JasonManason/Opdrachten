@@ -1,3 +1,4 @@
+import random
 #Jason de Mey, Klas AI V1B, Blok C, Structured Programming
 
 #===============================================Opdracht 1, Pyramide:===================================================
@@ -168,13 +169,21 @@ def gemiddelde_lists(lst):
 #==================================================Opdracht 7, Random:==================================================
 def willekeurig():
     '''Laat gebruiker gokken uit lijst met cijfers tot antwoord goed is. Antwoord is willekeurig.'''
-    #lst = [] #<= willekeurige cijfers in lst
+    antwoord, gok = random.randint(1, 10), 0
+    while antwoord != gok:
+        #print(antwoord) # <= cheat sheet
+        gok = int(input(f'Guess the number between 0 and 10:\n'))
+    print('Correct!')
 
-    #<= user input()?
 
-    #check if input in lst: return True of False
+#willekeurig() # <= comment uit om meteen andere opdracht te runnen.
 
-#willekeurig()
+
+#================================================Opdracht 8, Compressie:================================================
+def compressie():
+    '''Verwijdert alle spaties en tabs aan het begin van elke regel van input bestand.'''
+
+
 
 
 #================================================Opdracht 10, Fibonaci:=================================================
