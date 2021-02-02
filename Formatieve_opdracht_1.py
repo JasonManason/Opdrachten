@@ -91,7 +91,13 @@ def compare_string_characters():
 #================================================Opdracht 3, Lijstcheck:================================================
 def count(lst, x):
     '''Berekent hoevaak getal x in een lijst voorkomt.'''
-    return lst.count(x)
+    count = 0
+
+    for i in lst:
+        if i == x:
+            count += 1
+
+    return count
 
 #print(count([1, -12, 0, 4, 33, 600, 43, -16, 4], 4)) # <= comment uit om meteen andere opdracht te runnen.
 
@@ -205,8 +211,50 @@ def cyclisch_verschuiven():
     '''Verschuift een binair karakter een x aantal bitjes. Dit kan zowel naar links als rechts zijn.
     Wegvallende bitjes komen terug aan de andere kant van de byte.'''
 
+    #byte 1011000 met x 3 geeft 1000101
+    #byte 1011100 met x -4 geeft 1100101
 
-cyclisch_verschuiven()
+    byte = ''
+    for i in range(0, 8):
+        byte += str((random.randint(0,1)))
+
+    shift = int(input(f'Your byte: {byte}.\nEnter a number between -7 and 7 to shift byte.\n'))
+
+    new = ''
+
+    for i in byte:
+        while i <= shift:  #<= while index of i?? <= len(shift)
+            new += i
+
+    print(new)
+
+
+
+    # def shift(s, n):
+    #     return ''.join(chr(ord(char) - n) for char in s)
+
+
+
+
+
+
+    #==============================================================================
+    # input = index
+    #
+    # string/byte slicen op index bijv=: '11' en '000000'
+    #
+    # losse strings beide variabele helft_1 = '11' en helft_2 = '000000'
+    #
+    # swap places en plak aan elkaar, dus new_string helft_2 + helft_1
+    #
+    # geeft '00000011'
+    # =============================================================================
+
+
+
+
+
+#cyclisch_verschuiven()
 
 
 #================================================Opdracht 10, Fibonaci:=================================================
@@ -217,3 +265,10 @@ def fibonacci(n, v0=0, v1=1):
     return fibonacci(n - 1, v1, v0 + v1) if n > 1 else (v0, v1)[n] # <= tot "n" klein genoeg is
 
 #print(fibonacci(9)) # <= comment uit om meteen andere opdracht te runnen.
+
+
+#==============================================Opdracht 11, Caesarcijfer:===============================================
+
+
+#================================================Opdracht 12, Fizzbuzz:=================================================
+

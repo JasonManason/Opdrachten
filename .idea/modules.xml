@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../OICT/AI/Final Assignments/FA2_AI_Algoritmiek_Jason_de_Mey/.idea/FA2_AI_Algoritmiek_Jason_de_Mey.iml" filepath="$PROJECT_DIR$/../../OICT/AI/Final Assignments/FA2_AI_Algoritmiek_Jason_de_Mey/.idea/FA2_AI_Algoritmiek_Jason_de_Mey.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Opdrachten.iml" filepath="$PROJECT_DIR$/.idea/Opdrachten.iml" />
     </modules>
   </component>
