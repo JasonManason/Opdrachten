@@ -75,11 +75,15 @@ def compare_string_characters():
     text_1 = input('Please enter a sentence.\n').capitalize()
     text_2 = input('Please enter another sentence to compare with the last.\n').capitalize()
 
-    for i in text_1:
-        if text_1.index(i) == text_2.index(i):
-            index = (text_1.index(i) + 1)
+    try:
+        for i in text_1:
+            if text_1.index(i) == text_2.index(i):
+                index = (text_1.index(i) + 1)
 
-    return print(f'The difference is in character {index}.')
+        return print(f'The difference is in character {index}.')
+
+    except ValueError:
+        print('It seems your sentences don\'t match from the beginning character(s).')
 
 #print(compare_string_characters()) # <= comment uit om meteen andere opdracht te runnen.
 
