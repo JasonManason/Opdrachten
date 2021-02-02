@@ -185,15 +185,29 @@ def willekeurig():
 #================================================Opdracht 8, Compressie:================================================
 def compressie():
     '''Verwijdert alle lege regels en alle spaties en/of tabs aan het begin van elke regel van input bestand.'''
-    #open file met optie tot rewrite
-    #for line in file: (lines als string)
-    # if (characters in file) => strip string
+    try:
+        with open('file.txt', 'r') as file:
+            lines = file.readlines()
 
-#compresie()
+            for line in lines:
+                lines.remove('\n')
+                print(line.strip())
+
+    except ValueError:
+        return None
+
+#compressie()
 
 
 #============================================Opdracht 9, Cyclisch verschuiven:==========================================
 '''evt gebruik maken van bit shiften!'''
+def cyclisch_verschuiven():
+    '''Verschuift een binair karakter een x aantal bitjes. Dit kan zowel naar links als rechts zijn.
+    Wegvallende bitjes komen terug aan de andere kant van de byte.'''
+
+
+cyclisch_verschuiven()
+
 
 #================================================Opdracht 10, Fibonaci:=================================================
 def fibonacci(n, v0=0, v1=1):
