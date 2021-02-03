@@ -245,7 +245,51 @@ def fibonacci(n, v0=0, v1=1):
 
 
 #==============================================Opdracht 11, Caesarcijfer:===============================================
+def caesarcijfer():
+    '''Vraagt gebruiker om tekst en een x rotatie en zet de gegeven tekst om in caesarcode met als rotatie x.'''
+
+    # for char in zin: + input uit lijst alfabet if charachter is not een leesteken
+
+    #note: 26 letters. evt modulo?
+
+    # c = (x + n) % 26
+
+    alpha = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    # check of hoofdletter? if hoofdletter >>> letter.isupper()
+    # eerst kleiner maken voor vergelijken, dan zoeken in alpha lijst en DAN weer letter.capytalize
+
+    # text = input('give a sentence:\n')
+    # shift = input('Give a number to rotate the sentence with:\n')
+
+    while True:
+        try:
+            text = str(input('give a sentence:\n'))
+            rotation = int(input('Give a number to rotate the sentence with:\n'))
+            break
+        except ValueError:
+            print('Please enter a valid input.')
+            continue
+
+
+    print(f'sentence: {text}\nshift: {rotation}')
+
+
+#caesarcijfer()
 
 
 #================================================Opdracht 12, Fizzbuzz:=================================================
+def fizzbuzz():
+    '''Print 1 t/m 100 en geeft voor elke veelvoud van 3 "fizz" en voor elke veelvoud van 5 "buzz".
+    In geval van overlap wordt er "fizzbuzz" geprint.'''
+    for i in range(0,100):
+        if i % 3 == 0 and i % 5 == 0:
+            print('fizzbuzz')
+        elif i % 5 == 0:
+            print('buzz')
+        elif i % 3 == 0:
+            print('fizz')
+        else:
+            print(i)
 
+fizzbuzz()
