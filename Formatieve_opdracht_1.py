@@ -210,51 +210,28 @@ def compressie():
 def cyclisch_verschuiven():
     '''Verschuift een binair karakter een x aantal bitjes. Dit kan zowel naar links als rechts zijn.
     Wegvallende bitjes komen terug aan de andere kant van de byte.'''
-
-    #byte 1011000 met x 3 geeft 1000101
-    #byte 1011100 met x -4 geeft 1100101
-
     byte = ''
     for i in range(0, 8):
         byte += str((random.randint(0,1)))
 
-    shift = int(input(f'Your byte: {byte}.\nEnter a number between -7 and 7 to shift byte.\n'))
+    while True:
+        try:
+            shift = int(input(f'Your byte: {byte}.\nEnter a number between -7 and 7 to shift byte.\n'))
+            if shift < -7 or shift > 7:
+                print('Please enter a valid number.')
+                continue
+            else:
+                break
+        except ValueError:
+            print('Please enter a valid number.')
+            continue
 
-    new = ''
+    if shift > 0:
+        return byte[- shift:] + byte[:len(byte) - shift] # <= shift naar rechts d.m.v string slicing
+    else:
+        return byte[~shift + 1:] + byte[:~shift + 1] # <= shift naar links d.m.v string slicing
 
-    for i in byte:
-        while i <= shift:  #<= while index of i?? <= len(shift)
-            new += i
-
-    print(new)
-
-
-
-    # def shift(s, n):
-    #     return ''.join(chr(ord(char) - n) for char in s)
-
-
-
-
-
-
-    #==============================================================================
-    # input = index
-    #
-    # string/byte slicen op index bijv=: '11' en '000000'
-    #
-    # losse strings beide variabele helft_1 = '11' en helft_2 = '000000'
-    #
-    # swap places en plak aan elkaar, dus new_string helft_2 + helft_1
-    #
-    # geeft '00000011'
-    # =============================================================================
-
-
-
-
-
-#cyclisch_verschuiven()
+#print(cyclisch_verschuiven())
 
 
 #================================================Opdracht 10, Fibonaci:=================================================
